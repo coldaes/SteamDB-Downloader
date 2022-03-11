@@ -45,7 +45,8 @@ namespace SteamDB_Downloader
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RunCommand("dotnet DepotDownloader.dll -app 730 -depot 731 -manifest 7617088375292372759");
+            // RunCommand("dotnet DepotDownloader.dll -app 730 -depot 731 -manifest 7617088375292372759");
+            RunCommand("echo hello");
         }
 
         private void cmdlog_TextChanged(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace SteamDB_Downloader
             
         }
 
-        private static void RunCommand(string command)
+        private void RunCommand(string command)
         {
             var process = new Process()
             {
@@ -73,10 +74,17 @@ namespace SteamDB_Downloader
             process.WaitForExit();
         }
 
-        private static void logcmd(string message)
+        private void logcmd(string message)
         {
-            cmdlog.Text += message + "\n\r";
+            Invoke(new Action(() =>
+            {
+                textareaLog.Text += message + "\n\r";
+            }));
         }
-        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

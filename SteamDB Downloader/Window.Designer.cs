@@ -37,7 +37,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cmdlog = new System.Windows.Forms.RichTextBox();
+            this.textareaLog = new System.Windows.Forms.RichTextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(174, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -115,7 +116,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cmdlog);
+            this.tabPage1.Controls.Add(this.textareaLog);
             this.tabPage1.Controls.Add(this.checkBox2);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.label4);
@@ -134,16 +135,16 @@
             this.tabPage1.Text = "Single Manifest";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // cmdlog
+            // textareaLog
             // 
-            this.cmdlog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cmdlog.DetectUrls = false;
-            this.cmdlog.Location = new System.Drawing.Point(261, 6);
-            this.cmdlog.Name = "cmdlog";
-            this.cmdlog.Size = new System.Drawing.Size(228, 252);
-            this.cmdlog.TabIndex = 10;
-            this.cmdlog.Text = "";
-            this.cmdlog.TextChanged += new System.EventHandler(this.cmdlog_TextChanged);
+            this.textareaLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textareaLog.DetectUrls = false;
+            this.textareaLog.Location = new System.Drawing.Point(261, 6);
+            this.textareaLog.Name = "textareaLog";
+            this.textareaLog.Size = new System.Drawing.Size(228, 252);
+            this.textareaLog.TabIndex = 10;
+            this.textareaLog.Text = "";
+            this.textareaLog.TextChanged += new System.EventHandler(this.cmdlog_TextChanged);
             // 
             // checkBox2
             // 
@@ -248,7 +249,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.RichTextBox cmdlog;
+        private System.Windows.Forms.RichTextBox textareaLog;
     }
 }
 
