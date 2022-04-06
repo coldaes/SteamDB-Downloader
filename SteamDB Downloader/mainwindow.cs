@@ -12,9 +12,9 @@ using System.IO;
 
 namespace SteamDB_Downloader
 {
-    public partial class Window : Form
+    public partial class mainwindow : Form
     {
-        public Window()
+        public mainwindow()
         {
             InitializeComponent();
         }
@@ -50,12 +50,15 @@ namespace SteamDB_Downloader
         {
             // dotnet DepotDownloader.dll -app 70 -depot 74 -manifest 6835489433906213943 -username test -password test
             // remeber to use DepotDownloader files
-            string appId = textBox1.Text, depotId = textBox2.Text, username = textBox5.Text, password = textBox4.Text, svalidate = " -validate";
-            manifest = textBox3.Text;
-            command = "dotnet DepotDownloader.dll -app " + appId + " -depot " + depotId + " -manifest " + manifest + " -username " + username + " -password " + password;
-            if (validate) command += svalidate;
+            // string appId = textBox1.Text, depotId = textBox2.Text, username = textBox5.Text, password = textBox4.Text, svalidate = " -validate";
+            // manifest = textBox3.Text;
+            // command = "dotnet DepotDownloader.dll -app " + appId + " -depot " + depotId + " -manifest " + manifest + " -username " + username + " -password " + password;
+            // if (validate) command += svalidate;
             //command = "mkdir debug_tits";
-            cmdlog_TextChanged(sender, e); //debug
+            // cmdlog_TextChanged(sender, e); //debug
+
+            var m = new login();
+            m.Show();
         }
 
         private void cmdlog_TextChanged(object sender, EventArgs e)
@@ -143,6 +146,11 @@ namespace SteamDB_Downloader
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
