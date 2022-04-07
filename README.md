@@ -1,5 +1,5 @@
-# SteamDB-Downloader
+**experimental user-interface**
 
-downloader for steam manifests using SteamRE/DepotDownloader + graphical user-interface.
+>added login window
 
-alpha-stage.
+![login](https://i.ibb.co/KD5P87N/login.png)
