@@ -52,7 +52,7 @@ namespace SteamDB_Downloader
             //manifest = textBox3.Text;
             //command = "dotnet DepotDownloader.dll -app " + appId + " -depot " + depotId + " -manifest " + manifest + " -username " + username + " -password " + password;
             //if (validate) command += svalidate;
-            //command = "mkdir debug_tits";
+            //command = "mkdir debug";
             //cmdlog_TextChanged(sender, e); //debug
         }
     }

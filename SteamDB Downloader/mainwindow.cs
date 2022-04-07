@@ -133,7 +133,7 @@ namespace SteamDB_Downloader
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process.Start("cmd.exe", "dir");
+            
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
@@ -157,6 +157,46 @@ namespace SteamDB_Downloader
         }
 
         private void singledltab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void openLogDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openCommandWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "dir");
+        }
+
+        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

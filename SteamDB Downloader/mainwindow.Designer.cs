@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainwindow));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.singledltab = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,12 +51,36 @@
             this.abouttab = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.statusStripMain = new System.Windows.Forms.StatusStrip();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dropdown1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openCommandWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDownloadDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openLogDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goToSteamDBcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.choosedirdialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.button3 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabControl.SuspendLayout();
             this.singledltab.SuspendLayout();
             this.multidltab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.logtab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -70,12 +93,6 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // progressBar1
-            // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // button1
             // 
@@ -103,9 +120,14 @@
             // 
             // singledltab
             // 
+            this.singledltab.Controls.Add(this.button3);
+            this.singledltab.Controls.Add(this.checkBox7);
+            this.singledltab.Controls.Add(this.checkBox6);
+            this.singledltab.Controls.Add(this.checkBox5);
+            this.singledltab.Controls.Add(this.checkBox4);
+            this.singledltab.Controls.Add(this.label5);
+            this.singledltab.Controls.Add(this.label2);
             this.singledltab.Controls.Add(this.checkBox3);
-            this.singledltab.Controls.Add(this.progressBar1);
-            this.singledltab.Controls.Add(this.button2);
             this.singledltab.Controls.Add(this.checkBox2);
             this.singledltab.Controls.Add(this.checkBox1);
             this.singledltab.Controls.Add(this.label4);
@@ -115,17 +137,11 @@
             this.singledltab.Controls.Add(this.textBox1);
             this.singledltab.Controls.Add(this.label3);
             this.singledltab.Controls.Add(this.label1);
+            this.singledltab.Controls.Add(this.richTextBox1);
             resources.ApplyResources(this.singledltab, "singledltab");
             this.singledltab.Name = "singledltab";
             this.singledltab.UseVisualStyleBackColor = true;
             this.singledltab.Click += new System.EventHandler(this.singledltab_Click);
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox2
             // 
@@ -150,6 +166,7 @@
             // 
             resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -223,11 +240,150 @@
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click_2);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // checkBox4
+            // 
+            resources.ApplyResources(this.checkBox4, "checkBox4");
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // statusStripMain
+            // 
+            this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripProgressBar1,
+            this.toolStripProgressBar2,
+            this.dropdown1});
+            resources.ApplyResources(this.statusStripMain, "statusStripMain");
+            this.statusStripMain.Name = "statusStripMain";
+            this.statusStripMain.SizingGrip = false;
+            this.statusStripMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
+            this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
+            // 
+            // toolStripProgressBar2
+            // 
+            this.toolStripProgressBar2.Name = "toolStripProgressBar2";
+            resources.ApplyResources(this.toolStripProgressBar2, "toolStripProgressBar2");
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            // 
+            // dropdown1
+            // 
+            this.dropdown1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dropdown1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pauseToolStripMenuItem,
+            this.goToSteamDBcomToolStripMenuItem,
+            this.openDownloadDirectoryToolStripMenuItem,
+            this.pauseDownloadToolStripMenuItem,
+            this.cancelDownloadToolStripMenuItem});
+            resources.ApplyResources(this.dropdown1, "dropdown1");
+            this.dropdown1.Margin = new System.Windows.Forms.Padding(225, 2, 0, 0);
+            this.dropdown1.Name = "dropdown1";
+            // 
+            // pauseToolStripMenuItem
+            // 
+            this.pauseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openCommandWindowToolStripMenuItem,
+            this.openLogDirectoryToolStripMenuItem});
+            this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
+            resources.ApplyResources(this.pauseToolStripMenuItem, "pauseToolStripMenuItem");
+            // 
+            // openCommandWindowToolStripMenuItem
+            // 
+            this.openCommandWindowToolStripMenuItem.Name = "openCommandWindowToolStripMenuItem";
+            resources.ApplyResources(this.openCommandWindowToolStripMenuItem, "openCommandWindowToolStripMenuItem");
+            this.openCommandWindowToolStripMenuItem.Click += new System.EventHandler(this.openCommandWindowToolStripMenuItem_Click);
+            // 
+            // pauseDownloadToolStripMenuItem
+            // 
+            this.pauseDownloadToolStripMenuItem.Name = "pauseDownloadToolStripMenuItem";
+            resources.ApplyResources(this.pauseDownloadToolStripMenuItem, "pauseDownloadToolStripMenuItem");
+            // 
+            // cancelDownloadToolStripMenuItem
+            // 
+            this.cancelDownloadToolStripMenuItem.Name = "cancelDownloadToolStripMenuItem";
+            resources.ApplyResources(this.cancelDownloadToolStripMenuItem, "cancelDownloadToolStripMenuItem");
+            // 
+            // openDownloadDirectoryToolStripMenuItem
+            // 
+            this.openDownloadDirectoryToolStripMenuItem.Name = "openDownloadDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.openDownloadDirectoryToolStripMenuItem, "openDownloadDirectoryToolStripMenuItem");
+            // 
+            // openLogDirectoryToolStripMenuItem
+            // 
+            this.openLogDirectoryToolStripMenuItem.Name = "openLogDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.openLogDirectoryToolStripMenuItem, "openLogDirectoryToolStripMenuItem");
+            this.openLogDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openLogDirectoryToolStripMenuItem_Click);
+            // 
+            // goToSteamDBcomToolStripMenuItem
+            // 
+            this.goToSteamDBcomToolStripMenuItem.Name = "goToSteamDBcomToolStripMenuItem";
+            resources.ApplyResources(this.goToSteamDBcomToolStripMenuItem, "goToSteamDBcomToolStripMenuItem");
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
+            this.richTextBox1.Name = "richTextBox1";
+            // 
+            // checkBox5
+            // 
+            resources.ApplyResources(this.checkBox5, "checkBox5");
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            resources.ApplyResources(this.checkBox6, "checkBox6");
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            resources.ApplyResources(this.checkBox7, "checkBox7");
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // notifyIcon
+            // 
+            resources.ApplyResources(this.notifyIcon, "notifyIcon");
+            // 
+            // choosedirdialog
+            // 
+            this.choosedirdialog.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // mainwindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -241,14 +397,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.logtab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStripMain.ResumeLayout(false);
+            this.statusStripMain.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabControl tabControl;
@@ -261,7 +419,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.RichTextBox textareaLog;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage logtab;
         private System.Windows.Forms.TabPage perftab;
         private System.Windows.Forms.TabPage abouttab;
@@ -269,6 +426,29 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.StatusStrip statusStripMain;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar2;
+        private System.Windows.Forms.ToolStripDropDownButton dropdown1;
+        private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openCommandWindowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openLogDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openDownloadDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pauseDownloadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelDownloadToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem goToSteamDBcomToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.FolderBrowserDialog choosedirdialog;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
