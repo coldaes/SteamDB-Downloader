@@ -72,6 +72,9 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mainwindow.en.resx">
+      <DependentUpon>mainwindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainwindow.resx">
       <DependentUpon>mainwindow.cs</DependentUpon>
     </EmbeddedResource>
