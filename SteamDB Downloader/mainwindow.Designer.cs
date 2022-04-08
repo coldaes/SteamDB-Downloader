@@ -36,7 +36,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.singledltab = new System.Windows.Forms.TabPage();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -48,8 +47,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.sidebackground2 = new System.Windows.Forms.RichTextBox();
-            this.sidebackground1 = new System.Windows.Forms.RichTextBox();
             this.multidltab = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,7 +55,6 @@
             this.textareaLog = new System.Windows.Forms.RichTextBox();
             this.perftab = new System.Windows.Forms.TabPage();
             this.abouttab = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -79,7 +75,6 @@
             this.multidltab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.logtab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +116,6 @@
             // singledltab
             // 
             this.singledltab.Controls.Add(this.button2);
-            this.singledltab.Controls.Add(this.linkLabel1);
             this.singledltab.Controls.Add(this.checkBox6);
             this.singledltab.Controls.Add(this.checkBox5);
             this.singledltab.Controls.Add(this.checkBox4);
@@ -137,18 +131,10 @@
             this.singledltab.Controls.Add(this.textBox1);
             this.singledltab.Controls.Add(this.label3);
             this.singledltab.Controls.Add(this.label1);
-            this.singledltab.Controls.Add(this.sidebackground2);
-            this.singledltab.Controls.Add(this.sidebackground1);
             resources.ApplyResources(this.singledltab, "singledltab");
             this.singledltab.Name = "singledltab";
             this.singledltab.UseVisualStyleBackColor = true;
             this.singledltab.Click += new System.EventHandler(this.singledltab_Click);
-            // 
-            // linkLabel1
-            // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
             // 
             // checkBox6
             // 
@@ -217,23 +203,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // sidebackground2
-            // 
-            this.sidebackground2.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.sidebackground2, "sidebackground2");
-            this.sidebackground2.Name = "sidebackground2";
-            this.sidebackground2.ReadOnly = true;
-            // 
-            // sidebackground1
-            // 
-            this.sidebackground1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.sidebackground1.DetectUrls = false;
-            resources.ApplyResources(this.sidebackground1, "sidebackground1");
-            this.sidebackground1.Name = "sidebackground1";
-            this.sidebackground1.ReadOnly = true;
-            this.sidebackground1.TabStop = false;
-            this.sidebackground1.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
-            // 
             // multidltab
             // 
             this.multidltab.Controls.Add(this.label7);
@@ -286,13 +255,6 @@
             resources.ApplyResources(this.abouttab, "abouttab");
             this.abouttab.Name = "abouttab";
             this.abouttab.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // statusStripMain
             // 
@@ -396,7 +358,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.statusStripMain);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "mainwindow";
@@ -408,7 +369,6 @@
             this.multidltab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.logtab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStripMain.ResumeLayout(false);
             this.statusStripMain.PerformLayout();
             this.ResumeLayout(false);
@@ -424,7 +384,6 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage singledltab;
         private System.Windows.Forms.TabPage multidltab;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label4;
@@ -452,14 +411,11 @@
         private System.Windows.Forms.ToolStripMenuItem openDownloadDirectoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pauseDownloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelDownloadToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox sidebackground2;
         private System.Windows.Forms.ToolStripMenuItem goToSteamDBcomToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.FolderBrowserDialog choosedirdialog;
-        private System.Windows.Forms.RichTextBox sidebackground1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button2;
     }
 }
