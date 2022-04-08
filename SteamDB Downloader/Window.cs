@@ -50,10 +50,10 @@ namespace SteamDB_Downloader
         {
             // dotnet DepotDownloader.dll -app 70 -depot 74 -manifest 6835489433906213943 -username test -password test
             // remeber to use DepotDownloader files
-            string appId = textBox1.Text, depotId = textBox2.Text, username = textBox5.Text, password = textBox4.Text, svalidate = " -validate";
+            string appId = textBox1.Text, depotId = textBox2.Text, username = textBox5.Text, password = textBox4.Text;
             manifest = textBox3.Text;
             command = "dotnet DepotDownloader.dll -app " + appId + " -depot " + depotId + " -manifest " + manifest + " -username " + username + " -password " + password;
-            if (validate) command += svalidate;
+            if (validate) command += " -validate";
             cmdlog_TextChanged(sender, e); //debug
         }
 
@@ -71,43 +71,14 @@ namespace SteamDB_Downloader
             string cmdoutput = "";
             while (!process.HasExited)
             {
-                cmdoutput += process.StandardOutput.ReadToEnd();
-
+                cmdoutput += process.StandardOutput.ReadLine() + "\n";
             }
             textareaLog.Text = cmdoutput;
-            if(log)
+            if (log)
             {
-                string output = cmdoutput + Environment.NewLine;
-                File.WriteAllText("./Log/Output for " + manifest + ".log", output);
+                if(!Directory.Exists("./Logs")) Directory.CreateDirectory("./Logs");
+                File.WriteAllText("./Logs/Output for " + manifest + ".log", textareaLog.Text);
             }
-        }
-
-        private void RunCommand(string command)
-        {
-            var process = new Process()
-            {
-                StartInfo = new ProcessStartInfo("cmd")
-                {
-                    UseShellExecute = false,
-                    RedirectStandardInput = true,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true,
-                    Arguments = String.Format("/c \"{0}\"", command),
-                }
-            };
-            process.OutputDataReceived += (s, e) => logcmd(e.Data);
-            process.Start();
-            process.BeginOutputReadLine();
-
-            process.WaitForExit();
-        }
-
-        private void logcmd(string message)
-        {
-            Invoke(new Action(() =>
-            {
-                textareaLog.Text += message + "\n\r";
-            }));
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
