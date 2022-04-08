@@ -18,11 +18,10 @@ namespace SteamDB_Downloader
         {
             InitializeComponent();
         }
-
-        bool validate = false;
+        
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (validate) validate = false; else validate = true;
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -45,64 +44,24 @@ namespace SteamDB_Downloader
 
         }
 
-        string command, manifest;
         private void button1_Click(object sender, EventArgs e)
         {
-            var m = new login();
-            m.Show();
+            
         }
 
         private void cmdlog_TextChanged(object sender, EventArgs e)
         {
-            System.Diagnostics.Process process = new System.Diagnostics.Process();
-            process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            process.StartInfo.FileName = "cmd.exe";
-            process.StartInfo.Arguments = @"/C " + command;
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.CreateNoWindow = true;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.RedirectStandardInput = true;
-            process.Start();
-            string cmdoutput = "";
-            while (!process.HasExited)
-            {
-                cmdoutput += process.StandardOutput.ReadToEnd();
-
-            }
-            textareaLog.Text = cmdoutput;
-            if(log)
-            {
-                string output = cmdoutput + Environment.NewLine;
-                File.WriteAllText("./Log/Output for " + manifest + ".log", output);
-            }
+            
         }
 
         private void RunCommand(string command)
         {
-            var process = new Process()
-            {
-                StartInfo = new ProcessStartInfo("cmd")
-                {
-                    UseShellExecute = false,
-                    RedirectStandardInput = true,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true,
-                    Arguments = String.Format("/c \"{0}\"", command),
-                }
-            };
-            process.OutputDataReceived += (s, e) => logcmd(e.Data);
-            process.Start();
-            process.BeginOutputReadLine();
-
-            process.WaitForExit();
+            
         }
 
         private void logcmd(string message)
         {
-            Invoke(new Action(() =>
-            {
-                textareaLog.Text += message + "\n\r";
-            }));
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,10 +69,9 @@ namespace SteamDB_Downloader
 
         }
 
-        bool log = false;
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (log) log = false; else log = true;
+           
         }
 
         private void Window_Load(object sender, EventArgs e)
@@ -201,9 +159,20 @@ namespace SteamDB_Downloader
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.youtube.com/watch?v=fJ9rUzIMcZQ");
+            
         }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

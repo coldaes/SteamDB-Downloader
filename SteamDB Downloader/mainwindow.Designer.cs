@@ -36,11 +36,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.singledltab = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.sidebackground2 = new System.Windows.Forms.RichTextBox();
+            this.sidebackground1 = new System.Windows.Forms.RichTextBox();
             this.multidltab = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,30 +59,21 @@
             this.perftab = new System.Windows.Forms.TabPage();
             this.abouttab = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dropdown1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openCommandWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pauseDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openDownloadDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openLogDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goToSteamDBcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.openDownloadDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.choosedirdialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.button3 = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.singledltab.SuspendLayout();
             this.multidltab.SuspendLayout();
@@ -120,8 +120,8 @@
             // 
             // singledltab
             // 
-            this.singledltab.Controls.Add(this.button3);
-            this.singledltab.Controls.Add(this.checkBox7);
+            this.singledltab.Controls.Add(this.button2);
+            this.singledltab.Controls.Add(this.linkLabel1);
             this.singledltab.Controls.Add(this.checkBox6);
             this.singledltab.Controls.Add(this.checkBox5);
             this.singledltab.Controls.Add(this.checkBox4);
@@ -137,11 +137,54 @@
             this.singledltab.Controls.Add(this.textBox1);
             this.singledltab.Controls.Add(this.label3);
             this.singledltab.Controls.Add(this.label1);
-            this.singledltab.Controls.Add(this.richTextBox1);
+            this.singledltab.Controls.Add(this.sidebackground2);
+            this.singledltab.Controls.Add(this.sidebackground1);
             resources.ApplyResources(this.singledltab, "singledltab");
             this.singledltab.Name = "singledltab";
             this.singledltab.UseVisualStyleBackColor = true;
             this.singledltab.Click += new System.EventHandler(this.singledltab_Click);
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            // 
+            // checkBox6
+            // 
+            resources.ApplyResources(this.checkBox6, "checkBox6");
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            resources.ApplyResources(this.checkBox5, "checkBox5");
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            resources.ApplyResources(this.checkBox4, "checkBox4");
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click_2);
+            // 
+            // checkBox3
+            // 
+            resources.ApplyResources(this.checkBox3, "checkBox3");
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
@@ -173,6 +216,23 @@
             resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // sidebackground2
+            // 
+            this.sidebackground2.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.sidebackground2, "sidebackground2");
+            this.sidebackground2.Name = "sidebackground2";
+            this.sidebackground2.ReadOnly = true;
+            // 
+            // sidebackground1
+            // 
+            this.sidebackground1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sidebackground1.DetectUrls = false;
+            resources.ApplyResources(this.sidebackground1, "sidebackground1");
+            this.sidebackground1.Name = "sidebackground1";
+            this.sidebackground1.ReadOnly = true;
+            this.sidebackground1.TabStop = false;
+            this.sidebackground1.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // multidltab
             // 
@@ -234,30 +294,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // checkBox3
-            // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click_2);
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // checkBox4
-            // 
-            resources.ApplyResources(this.checkBox4, "checkBox4");
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
-            // 
             // statusStripMain
             // 
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -270,6 +306,11 @@
             this.statusStripMain.SizingGrip = false;
             this.statusStripMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
@@ -281,11 +322,6 @@
             // 
             this.toolStripProgressBar2.Name = "toolStripProgressBar2";
             resources.ApplyResources(this.toolStripProgressBar2, "toolStripProgressBar2");
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             // 
             // dropdown1
             // 
@@ -314,21 +350,6 @@
             resources.ApplyResources(this.openCommandWindowToolStripMenuItem, "openCommandWindowToolStripMenuItem");
             this.openCommandWindowToolStripMenuItem.Click += new System.EventHandler(this.openCommandWindowToolStripMenuItem_Click);
             // 
-            // pauseDownloadToolStripMenuItem
-            // 
-            this.pauseDownloadToolStripMenuItem.Name = "pauseDownloadToolStripMenuItem";
-            resources.ApplyResources(this.pauseDownloadToolStripMenuItem, "pauseDownloadToolStripMenuItem");
-            // 
-            // cancelDownloadToolStripMenuItem
-            // 
-            this.cancelDownloadToolStripMenuItem.Name = "cancelDownloadToolStripMenuItem";
-            resources.ApplyResources(this.cancelDownloadToolStripMenuItem, "cancelDownloadToolStripMenuItem");
-            // 
-            // openDownloadDirectoryToolStripMenuItem
-            // 
-            this.openDownloadDirectoryToolStripMenuItem.Name = "openDownloadDirectoryToolStripMenuItem";
-            resources.ApplyResources(this.openDownloadDirectoryToolStripMenuItem, "openDownloadDirectoryToolStripMenuItem");
-            // 
             // openLogDirectoryToolStripMenuItem
             // 
             this.openLogDirectoryToolStripMenuItem.Name = "openLogDirectoryToolStripMenuItem";
@@ -340,29 +361,20 @@
             this.goToSteamDBcomToolStripMenuItem.Name = "goToSteamDBcomToolStripMenuItem";
             resources.ApplyResources(this.goToSteamDBcomToolStripMenuItem, "goToSteamDBcomToolStripMenuItem");
             // 
-            // richTextBox1
+            // openDownloadDirectoryToolStripMenuItem
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.richTextBox1, "richTextBox1");
-            this.richTextBox1.Name = "richTextBox1";
+            this.openDownloadDirectoryToolStripMenuItem.Name = "openDownloadDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.openDownloadDirectoryToolStripMenuItem, "openDownloadDirectoryToolStripMenuItem");
             // 
-            // checkBox5
+            // pauseDownloadToolStripMenuItem
             // 
-            resources.ApplyResources(this.checkBox5, "checkBox5");
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.pauseDownloadToolStripMenuItem.Name = "pauseDownloadToolStripMenuItem";
+            resources.ApplyResources(this.pauseDownloadToolStripMenuItem, "pauseDownloadToolStripMenuItem");
             // 
-            // checkBox6
+            // cancelDownloadToolStripMenuItem
             // 
-            resources.ApplyResources(this.checkBox6, "checkBox6");
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            resources.ApplyResources(this.checkBox7, "checkBox7");
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.cancelDownloadToolStripMenuItem.Name = "cancelDownloadToolStripMenuItem";
+            resources.ApplyResources(this.cancelDownloadToolStripMenuItem, "cancelDownloadToolStripMenuItem");
             // 
             // notifyIcon
             // 
@@ -372,11 +384,11 @@
             // 
             this.choosedirdialog.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
-            // button3
+            // button2
             // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // mainwindow
             // 
@@ -440,15 +452,15 @@
         private System.Windows.Forms.ToolStripMenuItem openDownloadDirectoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pauseDownloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelDownloadToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox sidebackground2;
         private System.Windows.Forms.ToolStripMenuItem goToSteamDBcomToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.FolderBrowserDialog choosedirdialog;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.RichTextBox sidebackground1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

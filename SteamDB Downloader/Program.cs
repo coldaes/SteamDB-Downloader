@@ -16,7 +16,7 @@ namespace SteamDB_Downloader
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainwindow());
+            Application.Run(new login());
         }
     }
 }
